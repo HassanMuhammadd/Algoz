@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+:root {
+    --bgColor: #1a1b1e;
+    --mainColor: #252a38;
+    --textColor: #0febd8;
+    --boxColor: #38ec56;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+    background-image: linear-gradient( var(--bgColor) 40%, var(--mainColor));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.textColor {
+    color: var(--textColor)!important;
 }
 
-.App-link {
-  color: #61dafb;
+.canHover:hover {
+    color: white!important;
+    transition: .1s;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+    background-color: var(--mainColor);
+    height: 100vh;
+}
+
+.mainContainer {
+    background-color: var(--mainColor);
+    height: 120vh;
+    overflow-x: hidden;
+}
+
+.box,
+.bfsBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: var(--textColor);
+    border: 2px solid var(--textColor);
+    border-radius: 5px;
+}
+
+.cursor:hover {
+    cursor: not-allowed;
+}
+
+.bfsBox:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: #676c6c;
+}
+
+.disabled {
+    background-color: rgb(148, 37, 37)!important;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.found {
+    background-color: var(--textColor);
+    color: black;
+}
+
+.ptr::after {
+    width: 10px;
+    height: 7px;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 6px solid red;
+    position: absolute;
+    bottom: -7px;
+}
+
+.searchButton {
+    background-color: var(--textColor);
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    width: 100px!important;
+}
+
+.searchButton:hover {
+    background-color: #06a497;
+    transition: .1s;
+}
+
+@media only screen and (max-width: 1090px) {
+    .box {
+        width: 35px;
+        height: 35px;
+    }
+    .searchBox h6 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 864px) {
+    .box {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .box {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .box {
+        width: 21px;
+        height: 21px;
+        font-size: 10px;
+    }
+    .bfsBox {
+        width: 24px;
+        height: 24px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .box {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 434px) {
+    .box {
+        width: 17px;
+        height: 17px;
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .box {
+        width: 12px;
+        height: 12px;
+        font-size: 7px;
+    }
+}
+
+.boxHolder {
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.holder {
+    min-height: 600px;
+}
+
+.boxContainer {
+    height: 60vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numbersInput {
+    width: 70px;
+    height: 40px;
+    border: 2px solid var(--textColor);
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.numbersInput:active,
+.numbersInput:focus {
+    transition: .2s;
+    border: 2px solid #06a497;
+    outline: none;
 }
