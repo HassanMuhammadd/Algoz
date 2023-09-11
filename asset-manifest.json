@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/HassanMuhammadd.github.io/Algoz/static/css/main.dc794661.css",
+    "main.js": "/HassanMuhammadd.github.io/Algoz/static/js/main.2b169f2c.js",
+    "static/js/787.9fb1f9ce.chunk.js": "/HassanMuhammadd.github.io/Algoz/static/js/787.9fb1f9ce.chunk.js",
+    "index.html": "/HassanMuhammadd.github.io/Algoz/index.html",
+    "main.dc794661.css.map": "/HassanMuhammadd.github.io/Algoz/static/css/main.dc794661.css.map",
+    "main.2b169f2c.js.map": "/HassanMuhammadd.github.io/Algoz/static/js/main.2b169f2c.js.map",
+    "787.9fb1f9ce.chunk.js.map": "/HassanMuhammadd.github.io/Algoz/static/js/787.9fb1f9ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc794661.css",
+    "static/js/main.2b169f2c.js"
+  ]
+}
